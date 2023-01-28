@@ -36,39 +36,7 @@ export default function News(props) {
     // eslint-disable-next-line
   },[])
   
-   
-  // const onclickPrev = async() =>{
-  //   // let url=`https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=271126b49b7c45ddaca3ee43f3937987&page=${page-1}&pageSize=${props.pageSize}`;
-  //   // setState({loading:true})
-  //   // let data= await fetch(url);
-  //   // let parsedData=await data.json()
-  //   // setState({
-  //   //   page:page-1,
-  //   //   articles:parsedData.articles,
-  //   //   loading:false
-  //   // })
-  //   setPage(page-1)
-    
-  //   updateNews()
-  // }
-  // const onclickNext = async() =>{
-  //   // if(page+1 <= Math.ceil(totalResults/20)){
-  //   //   let url=`https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=271126b49b7c45ddaca3ee43f3937987&page=${page+1}&pageSize=${props.pageSize}`;
-  //   //   setState({loading:true})
-  //   // let data= await fetch(url);
-  //   // let parsedData=await data.json()
-  //   // setState({
-  //   //   page:page+1,
-  //   //   articles:parsedData.articles,
-  //   //   loading:false
-  //   // })
-  //   setPage(page+1)
-    
-  //   updateNews()
-  //   //  }
-    
-  // }
-  
+ 
   const fetchMoreData = async() => {
     // a fake async api call like which sends
     // 20 more records in 1.5 secs
@@ -111,11 +79,7 @@ export default function News(props) {
           </div>
 
           </InfiniteScroll>
-          {/* <div className="container d-flex justify-content-between">
-          <button disabled={page<=1} type="button" className="btn btn-link" onClick={onclickPrev}>&larr; Prev</button>
-
-          <button disabled={page +1 > Math.ceil(totalResults/props.pageSize)} type="button" className="btn btn-link" onClick={onclickNext}>Next &rarr;</button>
-          </div> */}
+         
       </>
     )
   
