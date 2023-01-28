@@ -13,7 +13,7 @@ export default function News(props) {
 
   
     
-    // document.title= `News Monkey - ${props.category.toUpperCase()}`
+    
   
   const updateNews = async () =>{
      props.setProgress(10);
@@ -31,6 +31,7 @@ export default function News(props) {
      props.setProgress(100);
   }
   useEffect(() => {
+     document.title= `News Monkey - ${props.category.toUpperCase()}`
     updateNews()
     // eslint-disable-next-line
   },[])
@@ -86,7 +87,7 @@ export default function News(props) {
   
     return (
       <>
-        <h1 className='text-center'>News Monkey - Top {props.category.charAt(0).toUpperCase() +  props.category.slice(1)} Headlines</h1>
+        <h1 className='text-center' style={{marginTop:"80px"}}>News Monkey - Top {props.category.charAt(0).toUpperCase() +  props.category.slice(1)} Headlines</h1>
         {loading && <Spinner />}
         <InfiniteScroll
           dataLength={articles.length}
